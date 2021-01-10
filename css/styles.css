@@ -1,16 +1,17 @@
 /* Main styles */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
 
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
+  --color-win: #40a170;
+  --color-lose: #301227;
   --color-start: #5b85b7;
-  --color-neutral: #445069;
-  --color-neutral-light: #D2D2D2;
-  --color-keys: #37474F;
-  --color-keys-light: #E5E5E5;
+  --color-neutral: #3f4a42;
+  --color-neutral-light: #fff;
+  --color-keys: #bf4504;
+  --color-keys-light: #fff;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
@@ -20,7 +21,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-color: #dbdbdb;
 }
 
 li, ol, ul {
@@ -62,7 +64,13 @@ button {
 
 #btn__reset {
 	width: 200px;
-	margin: 0 auto;
+  margin: 0 auto;
+  transition: all .5s ease-in-out;
+}
+
+#btn__reset:hover {
+  background-color: #bf4504;
+  color: #fff
 }
 
 .main-container {
@@ -86,7 +94,13 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #bf4504;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+  transition: all .5s;
+}
+.header:hover {
+  transform: rotate(-10deg);
+  color: #fff;
 }
 
 
@@ -105,13 +119,14 @@ button {
 
 .space {
   width: 15px;
+  padding: 5px;
+  margin: 5px;
 }
-
 
 
 .show {
   color: #fff;
-  background-color: #4ac0d5;
+  background-color: #40a170;
   font-size: 20px;
   height: 65px;
   width: 65px;
@@ -131,21 +146,21 @@ button {
 }
 
 .chosen {
-  background: #3a3f58;
+  background: var(--color-neutral);
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
+  background: #bf4504;
   color: #FFFFFF;
 }
 
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #f7a964;
+  background: #bf4504;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -157,6 +172,15 @@ button {
   padding: 14px 16px 16px 14px;
   border-bottom: solid 4px rgba(0, 0, 0, 0);
   border-right: solid 3px rgba(0, 0, 0, 0);
+}
+
+.key {
+  transition: all .2s;
+}
+
+.key:hover {
+  transform: scale(1.2);
+  border: solid 1px #3f4a42;
 }
 
 
@@ -177,10 +201,17 @@ button {
 
 .title {
   color: #FFF;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+  transition: all .5s ease-in-out;
+}
+
+.title:hover {
+  transform: scale(1.2);
+  color: #bf4504;
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #3f4a42;
 }
 
 .start a {
@@ -188,6 +219,7 @@ button {
 }
 
 .win {
+  transition: all 2s ease-in;
   background-color: var(--color-win);
 }
 
@@ -195,10 +227,22 @@ button {
   color: var(--color-win);
 }
 
+.win:active {
+  opacity: 1;
+}
+
+.win .title{
+  margin-top: 25px;
+}
+
 .lose {
-  background-color: #f5785f;
+  background-color: var(--color-lose);
 }
 
 .lose a {
   color: var(--color-lose);
+}
+
+.lose .title {
+  margin-top: 25px;
 }
