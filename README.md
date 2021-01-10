@@ -22,13 +22,18 @@
     
    -- *Overlay* --
     1. Changing background color of start to neutral deep green
+    
     2. Adding hover transition to ease in/out color of title text to bold orange and slightly increased scale
+    
     3. Adding hover transition to start button to ease in/out background to bold orange and font to off white
+    
     4. Changing background color of .win overlay to deeper emerald green to better complement palette
+    
     5. Changing background colof of .lose overlay to deep purple to better complement palette
 
    -- *General* --
     1. Updating background color to warmer gray to complement chosen color scheme 
+    
     2. Adding hover transition to ease in/out color of title text and transform text to rotate slightly upon hover
 
    -- *Phrase* --
@@ -36,6 +41,7 @@
 
    -- *Keyboard* --
     1. Adding hover transition to add border with neutral deep green and slightly increased scale for easier visual of which key is currently being hovered over
+    
     2. Changing color scheme of .wrong selection to match bold orange from title
 
 Thanks for reading me! Cheers!
